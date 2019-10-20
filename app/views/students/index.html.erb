@@ -3,7 +3,6 @@
 <% @students.each do |student| %>
   <section id="student-<%= student.id %>">
     <p><%= student.name %></p>
-    <p><%= student.age %></p>
     <p><%= student.cohort %></p>
     <p>Instructors:</p>
     <% student.instructors.each do |instructor| %>
