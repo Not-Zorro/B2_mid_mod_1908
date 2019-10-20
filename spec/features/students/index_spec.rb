@@ -7,7 +7,7 @@ describe "Student index page" do
     ian = Instructor.create(name: 'Ian')
     david = Student.create(
       name: 'David',
-      age: 19,
+      age: 20,
       cohort: 1908
     )
     meg.students << david
@@ -17,7 +17,7 @@ describe "Student index page" do
 
     within "#student-#{david.id}" do
       expect(page).to have_content('David')
-      expect(page).to have_content('19')
+      expect(page).to_not have_content('20')
       expect(page).to have_content('1908')
       expect(page).to have_content('Instructors:')
       expect(page).to have_link('Meg')
